@@ -65,7 +65,7 @@ WORKDIR /root
 
 # LinkMobiblity SMS Driver - SMS modules need to be in shared perl libs
 RUN mkdir -p /usr/share/perl5/SMS/Send/NO && \
-  cp /koha/Deichman/LinkMobilityHTTP.pm /usr/share/perl5/SMS/Send/NO/LinkMobilityHTTP.pm
+  cp /usr/share/koha/intranet/cgi-bin/sms/LinkMobilityHTTP.pm /usr/share/perl5/SMS/Send/NO/LinkMobilityHTTP.pm
 
 COPY docker-entrypoint.sh /root/entrypoint.sh
 ENTRYPOINT ["/root/entrypoint.sh"]
